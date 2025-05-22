@@ -1,19 +1,23 @@
 package day;
-import java.util.*;
-public class project8 {
-
-	public static void main(String[] args) throws ArithmeticException{
-		 Scanner sc=new Scanner(System.in);
-		 System.out.println("enter a,b values");
-		 try {
-			 int a=sc.nextInt();
-			 int b=sc.nextInt();
+ public class project8{
+static void add(int a,int b) throws ArithmeticException  {
+	if(b==0) {
+		throw new ArithmeticException("maths radha neeku");
+	}
 			 int c=a/b;
 			 System.out.println(c); 
-		 }catch(ArithmeticException| InputMismatchException e) {
-			 System.out.println(e.getMessage());
-		  
-	 
 }
+    public static void main(String[] args) { 
+    	try {
+    		add(10,0);
+    		
+    	}catch(ArithmeticException e) {
+    		System.out.println(e.getMessage());
+    	}finally {
+    		System.out.println("covered all keywords");
+    	}
+				 
+	 }
 }
-}
+
+
